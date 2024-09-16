@@ -1,0 +1,23 @@
+<div>
+  <ion-text>
+    <h1>Conversor de monedas</h1>
+  </ion-text>
+
+  <ion-input type="number" placeholder="Ingresa cantidad" [(ngModel)]="cantidad"></ion-input>
+
+  <ion-text>
+    <h1>Selecciona la moneda</h1>
+  </ion-text>
+
+  <ion-select placeholder="Selecciona una moneda" [(ngModel)]="monedaSeleccionada" (ionChange)="monedaSeleccionadaChanged($event)">
+    <ion-select-option value="dolar">Dólar</ion-select-option>
+    <ion-select-option value="euro">Euro</ion-select-option>
+    <ion-select-option value="libra">Libra</ion-select-option>
+  </ion-select>
+
+  <ion-button (click)="convertir()">Convertir</ion-button>
+
+  <ion-text>
+    <h2>Resultado: {{ resultado | number:'1.2-2' }} {{ pesos}}</h2>
+  </ion-text>
+</div>

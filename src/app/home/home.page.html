@@ -1,0 +1,18 @@
+<div>
+  <ion-img src="assets/icon/perro.png"></ion-img>
+  <ion-text>
+    <h1>¿Cuál es la edad de tu mascota</h1>
+  </ion-text>
+
+  <ion-input type="text" placeholder="Ingrese la edad en anios" [(ngModel)]="edad" required="LLena"></ion-input>
+
+  <ion-button (click)="calcular()">
+    Calcular
+  </ion-button>
+  
+  <ion-text>
+    <h1>{{resultado}}</h1>
+  </ion-text>
+   
+  
+</div>
